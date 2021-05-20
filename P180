@@ -1,0 +1,33 @@
+$(document).ready(function () {
+    alert("Please allow the device to know your location!")
+    initGeolocation();
+})
+
+$(function () {
+    $("#navigate-button").click(function () {
+        window.location.href = `ar_navigation.html?source=${latitude};${longitude}&destination=${destination.lat};${destination.lng}`
+    })
+})
+
+function initGeolocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(success);
+    }
+    else {
+        alert("Sorry, your browser does not support geolocation services.");
+    }
+}
+function render_elements() {
+    $.ajax({
+        url: https://api.openweathermap.org/data/2.5/weather?lat={lat}&amp;lon={lon}&amp;appi
+d={API key}  type: "get",
+        success: function (response) {
+            let images = {
+                "turn_right": "ar_right.png",
+                "turn_left": "ar_left.png",
+                "slight_right": "ar_slight_right.png",
+                "slight_left": "ar_slight_left.png",
+                "straight": "ar_straight.png"
+Kelvin = (Celsius + 273.15)
+let latitude, longitude;
+let destination;
